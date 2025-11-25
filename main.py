@@ -8,7 +8,7 @@ import datetime
 try:
     import matplotlib.pyplot as plt
 except ImportError:
-    plt = None  # Ha nincs telepítve, kezeljük a hibát később
+    plt = None 
 
 
 class Kiadas_GYZS:
@@ -25,7 +25,7 @@ class PenzugyiApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Költségkövető App - GYZS")
-        self.root.geometry("400x600")  # Még nagyobb a diagram gomb miatt
+        self.root.geometry("400x600")  
 
         self.kiadasok_lista = []
 
@@ -95,7 +95,7 @@ class PenzugyiApp:
             messagebox.showwarning("Hiányos adat", "Kérlek tölts ki minden mezőt!")
 
     def diagram_keszites_GYZS(self):
-        # 1. Ellenőrzés: Van-e matplotlib?
+      
         if plt is None:
             messagebox.showerror("Hiba",
                                  "A diagramhoz telepíteni kell a matplotlib modult!\nParancs: pip install matplotlib")
@@ -110,22 +110,21 @@ class PenzugyiApp:
         ertekek = []
 
         for tetel in self.kiadasok_lista:
-            # Hozzáadjuk a neveket és összegeket a listákhoz
-            # (Profi verzióban itt összegeznénk az azonos nevűeket, de ez így is működik)
+          
             kategoriak.append(tetel.megnevezes)
             ertekek.append(tetel.osszeg)
 
-        # 4. Diagram kirajzolása
+      
         try:
             plt.figure(figsize=(8, 6))  # Ablak mérete
-            # Kördiagram (Pie chart) készítése
+          
             plt.pie(ertekek, labels=kategoriak, autopct='%1.1f%%', startangle=140)
             plt.title("Kiadások eloszlása - GYZS")  # Címben is a monogram
             plt.show()  # Ez dobja fel az ablakot
         except Exception as e:
             messagebox.showerror("Hiba", f"Hiba a diagram rajzolásakor: {e}")
 
-    # --- FÁJLKEZELÉS (GYZS) ---
+   
     def fajlba_iras_GYZS(self):
         fajl_utvonal = filedialog.asksaveasfilename(
             defaultextension=".csv",
