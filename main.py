@@ -5,14 +5,12 @@ import csv
 import os
 import datetime
 
-# --- PRÓBÁLJUK IMPORTÁLNI A DIAGRAM RAJZOLÓT ---
 try:
     import matplotlib.pyplot as plt
 except ImportError:
     plt = None  # Ha nincs telepítve, kezeljük a hibát később
 
 
-# --- 1. FELTÉTEL: Saját osztály (GYZS) ---
 class Kiadas_GYZS:
     def __init__(self, megnevezes, osszeg, datum):
         self.megnevezes = megnevezes
@@ -31,20 +29,18 @@ class PenzugyiApp:
 
         self.kiadasok_lista = []
 
-        # --- GRAFIKUS FELÜLET (GUI) ---
 
-        # 1. Dátum
+       
         tk.Label(root, text="Dátum (ÉÉÉÉ-HH-NN):").pack(pady=5)
         self.entry_datum = tk.Entry(root)
         self.entry_datum.pack(pady=5)
         self.entry_datum.insert(0, str(datetime.date.today()))
 
-        # 2. Megnevezés
         tk.Label(root, text="Kiadás megnevezése:").pack(pady=5)
         self.entry_nev = tk.Entry(root)
         self.entry_nev.pack(pady=5)
 
-        # 3. Összeg
+        
         tk.Label(root, text="Összeg (Ft):").pack(pady=5)
         self.entry_osszeg = tk.Entry(root)
         self.entry_osszeg.pack(pady=5)
@@ -53,20 +49,18 @@ class PenzugyiApp:
         btn_frame_top = tk.Frame(root)
         btn_frame_top.pack(pady=10)
 
-        # Hozzáadás
+     
         self.btn_hozzaad = tk.Button(btn_frame_top, text="Hozzáadás", command=self.rogzites_GYZS)
         self.btn_hozzaad.pack(side=tk.LEFT, padx=5)
 
-        # --- ÚJ GOMB: DIAGRAM ---
-        # Különleges színnel kiemelve
+      
         self.btn_diagram = tk.Button(btn_frame_top, text="📊 Diagram", command=self.diagram_keszites_GYZS, bg="#cff4fc")
         self.btn_diagram.pack(side=tk.LEFT, padx=5)
 
-        # Lista
+       
         self.listbox = tk.Listbox(root, width=60, height=10)
         self.listbox.pack(pady=10)
 
-        # Fájlkezelő gombok kerete (Alsó sor)
         btn_frame_bottom = tk.Frame(root)
         btn_frame_bottom.pack(pady=10)
 
@@ -80,7 +74,7 @@ class PenzugyiApp:
 
         tk.Button(root, text="Kilépés", command=root.quit, bg="#f8d7da").pack(pady=10)
 
-    # --- ADATFELVÉTEL (GYZS) ---
+   
     def rogzites_GYZS(self):
         datum = self.entry_datum.get()
         nev = self.entry_nev.get()
@@ -100,7 +94,6 @@ class PenzugyiApp:
         else:
             messagebox.showwarning("Hiányos adat", "Kérlek tölts ki minden mezőt!")
 
-    # --- ÚJ FÜGGVÉNY: DIAGRAM KÉSZÍTÉS (GYZS) ---
     def diagram_keszites_GYZS(self):
         # 1. Ellenőrzés: Van-e matplotlib?
         if plt is None:
@@ -108,12 +101,11 @@ class PenzugyiApp:
                                  "A diagramhoz telepíteni kell a matplotlib modult!\nParancs: pip install matplotlib")
             return
 
-        # 2. Ellenőrzés: Van-e adat?
         if not self.kiadasok_lista:
             messagebox.showwarning("Üres", "Nincs megjeleníthető adat!")
             return
 
-        # 3. Adatok előkészítése a diagramhoz
+       
         kategoriak = []
         ertekek = []
 
