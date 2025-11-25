@@ -116,7 +116,7 @@ class PenzugyiApp:
 
       
         try:
-            plt.figure(figsize=(8, 6))  # Ablak mérete
+            plt.figure(figsize=(8, 6)) 
           
             plt.pie(ertekek, labels=kategoriak, autopct='%1.1f%%', startangle=140)
             plt.title("Kiadások eloszlása - GYZS")  # Címben is a monogram
