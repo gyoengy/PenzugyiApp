@@ -119,8 +119,8 @@ class PenzugyiApp:
             plt.figure(figsize=(8, 6)) 
           
             plt.pie(ertekek, labels=kategoriak, autopct='%1.1f%%', startangle=140)
-            plt.title("Kiadások eloszlása - GYZS")  # Címben is a monogram
-            plt.show()  # Ez dobja fel az ablakot
+            plt.title("Kiadások eloszlása - GYZS")  
+            plt.show()  
         except Exception as e:
             messagebox.showerror("Hiba", f"Hiba a diagram rajzolásakor: {e}")
 
