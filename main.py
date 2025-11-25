@@ -45,7 +45,7 @@ class PenzugyiApp:
         self.entry_osszeg = tk.Entry(root)
         self.entry_osszeg.pack(pady=5)
 
-        # Gombok kerete (Felső sor)
+       
         btn_frame_top = tk.Frame(root)
         btn_frame_top.pack(pady=10)
 
