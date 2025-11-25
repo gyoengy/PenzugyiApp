@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afb5ebb8-a7e6-4b35-af44-b40d8fae0f35" name="Changes" comment="nincs">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adatok_GYZS.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_kommentek nélkül.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proba.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rezsi.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +22,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "gyoengy"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/gyoengy/main.py.git",
+    "accountId": "3ee86990-a1d4-4d58-8b31-bb4552349468"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -75,7 +82,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763741076519</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="nincs">
+      <option name="closed" value="true" />
+      <created>1764078373270</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764078373270</updated>
+    </task>
+    <task id="LOCAL-00003" summary="nincs">
+      <option name="closed" value="true" />
+      <created>1764078404957</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764078404957</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
